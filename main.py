@@ -6,11 +6,15 @@
 
 def count_by(items, key):
     values = {}
+    item_values = []
     if not items:
         raise ValueError("empty input")
-
+    if not key:
+        raise ValueError("empty key")
+    
     # alle values aus items in liste legen
-    item_values = items.values()
+    for item in items:
+        item_values.append(item[key])
     # jedes item in items in der liste zählen und in dict legen. Nur exact match zählt
     for item in items:
         values[item[key]] = item_values.count(item[key])

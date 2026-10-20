@@ -13,3 +13,5 @@ def test_empty_input():
     with pytest.raises(ValueError):
         count_by(liste,"typ")
 
+def test_normal_input():
+    assert count_by([{"typ": "a"}, {"typ": "b"}, {"typ": "a"}],"typ") == {'a': 2, 'b': 1}
