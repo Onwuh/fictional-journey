@@ -23,7 +23,7 @@ def count_by(items, key):
 
         
                 
-
-print(count_by([{"typ": "a"}, {"typ": "b"}, {"typ": "a"}],"typ"))
+if __name__ == "__main__":
+    print(count_by([{"typ": "a"}, {"typ": "b"}, {"typ": "a"}],"typ"))
 
 
