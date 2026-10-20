@@ -20,3 +20,7 @@ def test_normal_input():
 def test_empty_dict():
     with pytest.raises(KeyError):
         count_by([{}, {"typ": "b"}, {"typ": "a"}],"typ")
+
+def test_different_key():
+    with pytest.raises(KeyError):
+            count_by([{"blah": "a"}, {"typ": "b"}, {"typ": "a"}],"typ")
