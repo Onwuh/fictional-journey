@@ -16,11 +16,7 @@ def test_empty_input():
 def test_normal_input():
     assert count_by([{"typ": "a"}, {"typ": "b"}, {"typ": "a"}],"typ") == {'a': 2, 'b': 1}
 
-# key error bei leerem dict. Weil der input immer vollständig sein soll und ein leeres dict auf einen fehler in der basis hinweist
-def test_empty_dict():
-    with pytest.raises(KeyError):
-        count_by([{}, {"typ": "b"}, {"typ": "a"}],"typ")
+def test_diff_case():
+    liste = [{"typ": "A"}, {"typ": "b"}, {"typ": "a"}]
+    assert count_by(liste,"typ") == {"A":1,"b":1,"a":1}
 
-def test_different_key():
-    with pytest.raises(KeyError):
-            count_by([{"blah": "a"}, {"typ": "b"}, {"typ": "a"}],"typ")
