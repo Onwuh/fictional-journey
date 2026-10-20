@@ -3,6 +3,7 @@
 def count_by(items:list, key:str) -> dict:
     values = {}
     item_values = []
+    # the input should never be completly empty, because this function is to count, if the input is empty, there is something wrong and we should raise an Error
     if not items:
         raise ValueError("empty input")
     # wenn kein key übergeben wird, value error, weil immer ein key benötigt wird
