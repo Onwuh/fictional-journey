@@ -14,7 +14,8 @@ def test_empty_input():
         count_by(liste,"typ")
 
 def test_normal_input():
-    assert count_by([{"typ": "a"}, {"typ": "b"}, {"typ": "a"}],"typ") == {'a': 2, 'b': 1}
+    liste = [{"typ": "a"}, {"typ": "b"}, {"typ": "a"},{"typ": "a"},{"typ": "b"}]
+    assert count_by(liste,"typ") == {'a': 3, 'b': 2}
 
 def test_diff_case():
     liste = [{"typ": "A"}, {"typ": "b"}, {"typ": "a"}]

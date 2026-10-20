@@ -1,6 +1,6 @@
 
 
-def count_by(items, key):
+def count_by(items:list, key:str) -> dict:
     values = {}
     item_values = []
     if not items:
@@ -14,9 +14,7 @@ def count_by(items, key):
     for item in items:
         item_values.append(item[key])
     # jedes item in items in der liste zählen und in dict legen. Nur exact match zählt
-    for item in items:
         values[item[key]] = item_values.count(item[key])
-
     return values
 
         
