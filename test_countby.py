@@ -7,11 +7,9 @@ def test_key_error():
     with pytest.raises(KeyError):
         count_by(liste, "typ")
 
-def test_empty_input():
+def test_empty_list():
     liste = []
-
-    with pytest.raises(ValueError):
-        count_by(liste,"typ")
+    assert count_by(liste,"typ") == {}
 
 def test_normal_input():
     liste = [{"typ": "a"}, {"typ": "b"}, {"typ": "a"},{"typ": "a"},{"typ": "b"}]
