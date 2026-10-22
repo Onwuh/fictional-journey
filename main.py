@@ -18,14 +18,15 @@ def count_by(items:list, key:str) -> dict:
 
 def count_rows_by(rows: list,column:str ,key:str ) -> int:
     key_count:int = 0
+    # make sure key is lower and has no trailing spaces
+    key = key.lower().strip()
+
     # check the inputs
-    
     if not key:
         raise ValueError("empty key")
     if column is None:
         raise ValueError("empty column name")
-    # make sure key is lower and has no trailing spaces
-    key = key.lower().strip()
+
     
     # iterate through rows with column key
     for row in rows:
