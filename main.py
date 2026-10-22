@@ -25,6 +25,7 @@ def count_rows_by(rows: list,column:str ,key:str ) -> int:
         raise ValueError("empty column name")
     # make sure key is lower and has no trailing spaces
     key = key.lower().strip()
+    
     # iterate through rows with column key
     for row in rows:
         if key in row[column].lower():
