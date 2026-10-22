@@ -19,13 +19,13 @@ def count_by(items:list, key:str) -> dict:
 def count_rows_by(rows: list,column:str ,key:str ) -> int:
     key_count:int = 0
     # check the inputs
-    key = key.lower().strip()
+    
     if not key:
         raise ValueError("empty key")
     if column is None:
         raise ValueError("empty column name")
     # make sure key is lower and has no trailing spaces
-    
+    key = key.lower().strip()
     
     # iterate through rows with column key
     for row in rows:
@@ -46,6 +46,6 @@ if __name__ == "__main__":
 
 
     print(count_by(to_count_list,"Bereich"))   
-    print(count_rows_by(to_count_list,"Weitere Voraussetzungen","0"))
+    print(count_rows_by(to_count_list,"Weitere Voraussetzungen","Python"))
 
 
