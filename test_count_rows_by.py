@@ -16,7 +16,7 @@ def test_missing_key():
                 {"name":"Johanna","area": "New York City, Bronx", "desc":"short purple hair, tall, 60 kg"}
                 ]
     with pytest.raises(ValueError):
-        count_rows_by(data,"area","")
+        count_rows_by(data,"area","   ")
 
 def test_lower_higher():
     data = [{"name":"john","area": "New York City, Downtown", "desc":"long brown hair, short, 80 kg"},
