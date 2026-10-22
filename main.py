@@ -19,7 +19,7 @@ def count_by(items:list, key:str) -> dict:
 def count_rows_by(rows: list,column:str ,key:str ) -> int:
     key_count:int = 0
     # make sure key is lower and has no trailing spaces
-    key = key.lower().strip()
+    key = key.strip().lower()
 
     # check the inputs
     if not key:
