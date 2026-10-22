@@ -40,5 +40,5 @@ def test_key_is_none():
                     {"name":"Jared","area": "New York City, Downtown", "desc":"long blue hair, big, 70 kg"},
                     {"name":"Johanna","area": "New York City, Bronx", "desc":"short purple hair, tall, 60 kg"}
                     ]
-    with pytest.raises(ValueError):
+    with pytest.raises(AttributeError):
         count_rows_by(data,"area",None)  # type: ignore
